@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chin Carine Wirdzeyii - Professional Profile</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff', 100: '#e0effe', 200: '#bae0fd',
+                            300: '#7cc8fb', 400: '#38a9f8', 500: '#0e8ce4',
+                            600: '#026fc7', 700: '#0358a1', 800: '#074b85',
+                            900: '#0c406e', 950: '#082949',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .nav-scrolled { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); padding-top: 0.75rem; padding-bottom: 0.75rem; }
+        .section-content { display: none; }
+        .section-active { display: block; }
+        .fade-in { animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="font-sans text-slate-900 bg-slate-50 selection:bg-brand-200 selection:text-brand-900">
+
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="text-xl font-bold font-display cursor-pointer text-brand-900" onclick="showSection('home')">
+                CHIN CARINE<span class="text-brand-500">.</span>
+            </div>
+
+            <div class="hidden md:flex space-x-8">
+                <button onclick="showSection('home')" class="nav-link text-sm font-medium transition-colors hover:text-brand-600 text-brand-600" data-section="home">Home</button>
+                <button onclick="showSection('about')" class="nav-link text-sm font-medium transition-colors hover:text-brand-600 text-slate-600" data-section="about">About</button>
+                <button onclick="showSection('experience')" class="nav-link text-sm font-medium transition-colors hover:text-brand-600 text-slate-600" data-section="experience">Experience</button>
+                <button onclick="showSection('contact')" class="nav-link text-sm font-medium transition-colors hover:text-brand-600 text-slate-600" data-section="contact">Contact</button>
+            </div>
+
+            <button class="md:hidden text-slate-900" onclick="toggleMobileMenu()">
+                <i data-lucide="menu" id="menu-icon"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-white border-b border-slate-100 p-6 flex flex-col space-y-4 shadow-xl">
+            <button onclick="showSection('home'); toggleMobileMenu()" class="text-left text-lg font-medium text-slate-600">Home</button>
+            <button onclick="showSection('about'); toggleMobileMenu()" class="text-left text-lg font-medium text-slate-600">About</button>
+            <button onclick="showSection('experience'); toggleMobileMenu()" class="text-left text-lg font-medium text-slate-600">Experience</button>
+            <button onclick="showSection('contact'); toggleMobileMenu()" class="text-left text-lg font-medium text-slate-600">Contact</button>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        
+        <div id="home" class="section-content section-active fade-in">
+            <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+                <div class="absolute top-0 right-0 -z-10 w-1/2 h-full bg-brand-50/50 rounded-l-[100px] hidden lg:block"></div>
+                <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="inline-flex items-center px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wider mb-6">
+                            Senior Administrative Professional
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-bold text-slate-900 leading-[1.1] mb-6 font-display">
+                            Chin Carine <br /> <span class="text-brand-600">Wirdzeyii</span>
+                        </h1>
+                        <p class="text-xl text-slate-600 mb-8 max-w-lg leading-relaxed">
+                            Associate Executive Officer with 15+ years of experience in project management, operations, and executive support within global NGO environments.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="showSection('about')" class="px-8 py-4 bg-brand-600 text-white rounded-xl font-semibold hover:bg-brand-700 transition-all shadow-lg flex items-center gap-2">
+                                View Profile <i data-lucide="chevron-right" size="20"></i>
+                            </button>
+                            <button onclick="showSection('contact')" class="px-8 py-4 bg-white text-slate-900 border border-slate-200 rounded-xl font-semibold hover:bg-slate-50 transition-all">
+                                Contact Me
+                            </button>
+                        </div>
+                        <div class="mt-12 grid grid-cols-3 gap-8 border-t border-slate-100 pt-8">
+                            <div><div class="text-3xl font-bold text-brand-900">15+</div><div class="text-sm text-slate-500">Years Experience</div></div>
+                            <div><div class="text-3xl font-bold text-brand-900">400+</div><div class="text-sm text-slate-500">Staff Coordinated</div></div>
+                            <div><div class="text-3xl font-bold text-brand-900">100%</div><div class="text-sm text-slate-500">Compliance Rate</div></div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl relative z-10">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-brand-600 rounded-3xl -z-10"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 font-display">Core Competencies</h2>
+                </div>
+                <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100">
+                        <i data-lucide="calendar" class="text-brand-600 mb-6"></i>
+                        <h3 class="text-xl font-bold mb-4 font-display">Executive & Operations</h3>
+                        <ul class="text-sm text-slate-600 space-y-2"><li>• Meeting Management</li><li>• Stakeholder Coordination</li><li>• Office Operations</li></ul>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100">
+                        <i data-lucide="bar-chart-3" class="text-brand-600 mb-6"></i>
+                        <h3 class="text-xl font-bold mb-4 font-display">Project Management</h3>
+                        <ul class="text-sm text-slate-600 space-y-2"><li>• Budget Monitoring</li><li>• Donor Reporting</li><li>• Procurement</li></ul>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100">
+                        <i data-lucide="users" class="text-brand-600 mb-6"></i>
+                        <h3 class="text-xl font-bold mb-4 font-display">Leadership</h3>
+                        <ul class="text-sm text-slate-600 space-y-2"><li>• Staff Recruitment</li><li>• Team Coordination</li><li>• Performance Mgmt</li></ul>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100">
+                        <i data-lucide="cpu" class="text-brand-600 mb-6"></i>
+                        <h3 class="text-xl font-bold mb-4 font-display">Technical</h3>
+                        <ul class="text-sm text-slate-600 space-y-2"><li>• AI Prompt Engineering</li><li>• Advanced Excel</li><li>• DHIS Systems</li></ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="about" class="section-content fade-in">
+            <section class="pt-32 pb-20 bg-white">
+                <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h1 class="text-4xl font-bold mb-8 font-display">About Me</h1>
+                        <p class="text-lg text-slate-600 mb-6">I am a results-driven Senior Administrative Professional with over 15 years of progressive experience in project management, operations, and executive support within global NGO environments.</p>
+                        <p class="text-lg text-slate-600 mb-8">Currently, I serve as Associate Executive Officer at EGPAF, supporting senior leadership and multiple high-impact health initiatives.</p>
+                    </div>
+                    <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="experience" class="section-content fade-in">
+            <section class="py-24 bg-slate-50">
+                <div class="max-w-4xl mx-auto px-6">
+                    <h2 class="text-3xl font-bold mb-12 text-center font-display">Professional Experience</h2>
+                    <div class="space-y-12">
+                        <div class="relative pl-8 border-l-2 border-brand-200">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-brand-600 border-4 border-white"></div>
+                            <h3 class="text-xl font-bold font-display">Associate Executive Officer</h3>
+                            <div class="text-brand-600 mb-4">EGPAF | Jan 2018 – Present</div>
+                            <p class="text-slate-600">Strategic executive support for Country Director; managed 50+ monthly stakeholder meetings and coordinated orientation for 400+ staff.</p>
+                        </div>
+                        <div class="relative pl-8 border-l-2 border-brand-200">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-brand-600 border-4 border-white"></div>
+                            <h3 class="text-xl font-bold font-display">Administrative Manager</h3>
+                            <div class="text-brand-600 mb-4">Ministry of Public Health | 2008 – 2017</div>
+                            <p class="text-slate-600">Managed office operations and health information systems (DHIS) for 12+ health programs.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="contact" class="section-content fade-in">
+            <section class="py-24 bg-brand-950 text-white">
+                <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-6 font-display">Let's Connect</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4"><i data-lucide="mail" class="text-brand-400"></i> chin.carine@yaoo.com</div>
+                            <div class="flex items-center gap-4"><i data-lucide="phone" class="text-brand-400"></i> +237 675 909 305</div>
+                            <div class="flex items-center gap-4"><i data-lucide="map-pin" class="text-brand-400"></i> Cameroon</div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl text-slate-900">
+                        <form class="space-y-4">
+                            <input type="text" placeholder="Full Name" class="w-full p-3 bg-slate-50 border rounded-xl">
+                            <input type="email" placeholder="Email" class="w-full p-3 bg-slate-50 border rounded-xl">
+                            <textarea placeholder="Message" rows="4" class="w-full p-3 bg-slate-50 border rounded-xl"></textarea>
+                            <button type="button" class="w-full py-4 bg-brand-600 text-white rounded-xl font-bold">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="py-12 bg-brand-950 border-t border-brand-900 text-brand-400">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 text-center">
+            <div class="text-lg font-bold font-display text-white">CHIN CARINE<span class="text-brand-500">.</span></div>
+            <div class="text-sm">© 2026 Chin Carine Wirdzeyii. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Handle Sticky Navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            const isOpen = !menu.classList.contains('hidden');
+            
+            menu.classList.toggle('hidden');
+            icon.setAttribute('data-lucide', isOpen ? 'menu' : 'x');
+            lucide.createIcons();
+        }
+
+        // Section Routing
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section-content').forEach(section => {
+                section.classList.remove('section-active');
+            });
+
+            // Show target section
+            const target = document.getElementById(sectionId);
+            target.classList.add('section-active');
+
+            // Update Nav Links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('data-section') === sectionId) {
+                    link.classList.add('text-brand-600');
+                    link.classList.remove('text-slate-600');
+                } else {
+                    link.classList.remove('text-brand-600');
+                    link.classList.add('text-slate-600');
+                }
+            });
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
